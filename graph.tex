@@ -1,0 +1,24 @@
+\begin{center}
+\begin{tikzpicture}
+\tkzKiviatDiagram[
+    scale = 0.4,
+    label space= 2.5,
+    label style/.append style={font=\small\itshape,black!80},
+    radial  style/.style ={-},
+    radial style/.style ={gray!50,-,shorten >=0.2cm},
+    radial  = 5,
+    gap     = 1,  
+    lattice = 5,
+    lattice style/.style ={gray!50}]%
+    {PHP, C\#, JS / TS, Java, Swift, Kotlin}
+\tkzKiviatLine[thin,color=blue!40,mark=none,
+                fill=blue!20](%
+                    3, % PHP
+                    4, % C#
+                    5, % JS
+                    3, % Java
+                    3.5, % Swift
+                    4 % Kotlin
+                ) 
+\end{tikzpicture}
+\end{center}
