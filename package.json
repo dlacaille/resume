@@ -1,0 +1,21 @@
+{
+    "name": "resume",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "en": "pdflatex dominic-lacaille-cv-en.tex && open dominic-lacaille-cv-en.pdf",
+        "fr": "pdflatex dominic-lacaille-cv-fr.tex && open dominic-lacaille-cv-fr.pdf",
+        "postinstall": "sudo tlmgr update --self && sudo tlmgr install classicthesis xcolor bera microtype koma-script mparhack palatino mathpazo fpl booktabs textcase titlesec tocloft footmisc caption currvita ragged2e everysel enumitem wrapfig fourier opensans fontaxes xkeyval fontawesome datenumber numprint preprint sectsty babel-french pgf && texhash"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dlacaille/resume.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dlacaille/resume/issues"
+    },
+    "homepage": "https://github.com/dlacaille/resume#readme"
+}
