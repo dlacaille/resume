@@ -2,11 +2,9 @@
 
 Find the latest PDFs here:
 
-[:page_facing_up: dominic-lacaille-cv-en.pdf](/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf)
-<embed src="/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf" width="100" height="200px" />
+[:page_facing_up:dominic-lacaille-cv-en.pdf](/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf)
 
-[:page_facing_up: dominic-lacaille-cv-fr.pdf](/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf)
-<embed src="/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf" width="100" height="200px" />
+[:page_facing_up:dominic-lacaille-cv-fr.pdf](/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf)
 
 ## Installing LaTeX
 
