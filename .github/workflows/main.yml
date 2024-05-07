@@ -4,24 +4,15 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Compile LaTeX document (EN)
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: dominic-lacaille-cv-en.tex
-          pre_compile: "tlmgr update --self && tlmgr install classicthesis xcolor bera microtype koma-script mparhack palatino mathpazo fpl booktabs textcase titlesec tocloft footmisc caption currvita ragged2e everysel enumitem wrapfig fourier opensans fontaxes xkeyval fontawesome datenumber numprint preprint sectsty babel-french pgf && texhash"
-      - name: Upload PDF file (EN)
+          root_file: dominic-lacaille-cv-??.tex
+      - name: Upload PDF files
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: dominic-lacaille-cv-en.pdf
-      - name: Compile LaTeX document (FR)
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: dominic-lacaille-cv-fr.tex
-          pre_compile: "tlmgr update --self && tlmgr install classicthesis xcolor bera microtype koma-script mparhack palatino mathpazo fpl booktabs textcase titlesec tocloft footmisc caption currvita ragged2e everysel enumitem wrapfig fourier opensans fontaxes xkeyval fontawesome datenumber numprint preprint sectsty babel-french pgf && texhash"
-      - name: Upload PDF file (FR)
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: dominic-lacaille-cv-fr.pdf
+          path: dominic-lacaille-cv-??.pdf
             
