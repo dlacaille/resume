@@ -1,23 +1,13 @@
 {
     // General settings
     "files.eol": "\n",
-    // Latex settings
-    "latex-workshop.linting.chktex.enabled": true,
-    "latex-workshop.latex.clean.subfolder.enabled": true,
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.message.error.show": false,
-    "latex-workshop.message.information.show": false,
     "editor.formatOnSave": true,
     "files.associations": {
         "*.tex": "latex"
     },
-    "latex-workshop.latexindent.args": [
-        "-c",
-        "%DIR%/",
-        "%TMPFILE%",
-        "-y=\"defaultIndent: '%INDENT%',onlyOneBackUp: 1\"",
-    ],
+    // Latex settings
+    "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.latex.search.rootFiles.include": [
         "*.tex"
-    ]
+    ],
 }
