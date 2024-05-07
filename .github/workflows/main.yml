@@ -1,5 +1,10 @@
-name: Build LaTeX document
-on: [push]
+name: Release LaTeX document
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -10,9 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: dominic-lacaille-cv-??.tex
-      - name: Upload PDF files
-        uses: actions/upload-artifact@v4
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: PDF
-          path: dominic-lacaille-cv-??.pdf
-            
+          files: dominic-lacaille-cv-??.pdf
