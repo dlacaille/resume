@@ -15,7 +15,13 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: dominic-lacaille-cv-??.tex
+      - name: Generate thumbnails
+        uses: jruipinto/ImageMagick-action@v1
+        with:
+          command: convert -density 30 dominic-lacaille-cv-??.pdf -quality 80 %t.jpg
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dominic-lacaille-cv-??.pdf
+          files: |
+            dominic-lacaille-cv-??.pdf
+            dominic-lacaille-cv-??.jpg
