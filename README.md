@@ -26,7 +26,7 @@ Using `tlmgr`, install the following:
 
 ```sh
 tlmgr update --self
-tlmgr install latexmk classicthesis xcolor bera microtype koma-script mparhack palatino mathpazo fpl booktabs textcase titlesec tocloft footmisc caption currvita ragged2e everysel enumitem wrapfig fourier opensans fontaxes xkeyval fontawesome datenumber numprint preprint sectsty babel-french pgf
+tlmgr install latexmk classicthesis xcolor bera microtype koma-script mparhack palatino mathpazo fpl booktabs textcase titlesec tocloft footmisc caption currvita ragged2e everysel enumitem wrapfig fourier opensans fontaxes xkeyval fontawesome5 datenumber numprint preprint sectsty babel-french pgf
 texhash
 ```
 
