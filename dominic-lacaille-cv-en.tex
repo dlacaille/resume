@@ -1,236 +1,270 @@
-\documentclass[fontsize=12pt, a4paper, oneside, usegeometry]{scrartcl}
+\documentclass{article}
+\usepackage[fontsize=9pt]{fontsize}
 
-\input{src/head}
+\input{preamble.tex}
 
 \begin{document}
 
-\thispagestyle{empty} % Stop the page count at the bottom of the first page
-
-\begin{cv}{\spacedallcaps{Dominic Lacaille}}\vspace{0.5em}
-
-%------------------------------------------------
-
-\vspace{1em}
-
-\NewEntry{}{\textit{Montreal, Canada}}
-
-\NewEntry{\IconText{\faEnvelope}{email}}
-{\href{mailto:dominic@lacaille.app}{dominic@lacaille.app}} % Email address
-
-\vspace{-0.5em}
-
-\NewEntry{\IconText{\faPhone}{phone}}
-{+1 (514) 984 0393} % Phone number(s)
-
-\vspace{-0.5em}
-
-\NewEntry{\IconText{\faLinkedin}{linkedin}}
-{\href{https://linkedin.com/in/dominic-lacaille-mtl}{linkedin.com/in/dominic-lacaille-mtl}}
-
-\vspace{-0.5em}
-
-\NewEntry{\IconText{\faGithub}{github}}
-{\href{https://github.com/dlacaille}{github.com/dlacaille}}
-
-%------------------------------------------------
-
-\section*{Summary}
-
-\Description{%
-    Passionate software developer with \WorkExp years of experience crafting web, mobile,
-    and server applications from concept to deployment. Thrives on solving complex challenges
-    through research and innovation, driving impactful solutions in fast-paced development
-    environments.%
-}
-
-%------------------------------------------------
-
-\section*{Work Experience}
-
-\NewEntry{01/2023--present}{Senior Developer, \textsc{Solution-Tek} --- Montreal}
-
-\Description{\MarginText{Solution-Tek Montreal}
-\vspace{-20pt}
-\begin{itemize}
-    \item Develops complex software capable of reaccommodating disrupted airline passengers
-    \item Uses C\#, RabbitMQ and micro-service architecture for high-volume reaccommodation of passengers
-    \item Develops a React Frontend in Typescript to manage disrupted flights and passengers
-    \item Leads a project improving the performance of the React Frontend by 300\%
-    \item Initiates architecture discussions to improve the product and development practices
-    \item Implements heuristics for finding alternate flights according to airline rules
-    %\item Maintains and deploys services using IaC (Infrastructure as Code)
-    \item Supports and deploys cloud-native, high-availability services on AWS
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{01/2022--01/2023}{Senior Front-End Team Lead, \textsc{Swoo} --- Brossard}
-
-\Description{\MarginText{Swoo Agence Numérique}
-\vspace{-20pt}
-\begin{itemize}
-    \item Leads the Front-End team in numerous web projects
-    %\item Implements an agile structure to incite team work and help organize milestones and deadlines
-    \item Trains the team on React, Typescript, latest accessibility principles, tailwind CSS and best practices
-    \item Develops an maintains a complex Laravel/React website for a foodtech startup
-    %\item Maintains and develops new features for WeCook using Laravel/Vue
-    \item Integrates websites in WordPress, including custom themes and plugins
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{08/2020--01/2022}{Senior Front-End Dev., \textsc{Higher Logic} --- Montreal}
-
-\Description{\MarginText{Higher Logic}
-\vspace{-20pt}
-\begin{itemize}
-    \item Creates an analytics interface in React Typescript with live data
-    %\item Develops dynamic customizations to the look and feel of the forum
-    \item Develops a declarative solution for generating complex forms in Typescript
-    \item Maintains and improves the core of Vanilla Forums and it's plugins in both PHP and React Typescript
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{10/2015--08/2020}{Application Software Dev., \textsc{Voxco} --- Montreal}
-
-\Description{\MarginText{Voxco Canada}
-\vspace{-20pt}
-\begin{itemize}
-    \item Develops an offline survey engine in React Typescript
-    \item Develops and designs an offline survey application for Android and iOS
-    % \item Participates in an Agile team with a fast release cycle
-    % \item Develops various APIs to support mobile applications
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{08/2012--10/2015}{Full Stack Dev., \textsc{Appcom} --- Longueuil}
-
-\Description{\MarginText{Appcom}
-\vspace{-20pt}
-\begin{itemize}
-    \item Develops mobile applications acting as GPS for quads, snowmobiles and boats
-    \item Develops WordPress websites, plugins and themes in PHP
-    % \item Develops sales websites for points-of-interest
-    % \item Develops an application capable of precisely triangulating the position of a device using Bluetooth "beacons"
-    \item Implements a license plate scanner for a mobile application using OpenCV
-    % \item Maintains ArcGIS cartography servers and creates tools to manipulate geographical data and generate tiled maps
-\end{itemize}}
-
-%------------------------------------------------
-
-\section*{Education}
-
-\NewEntry{2010--2013}{Édouard-Montpetit College --- Longueuil}
-
-\Description{\MarginText{College Diploma}Computer Science\ \ $\cdotp$\ \ \textit{Specialization: Business Computing}}
-
-%------------------------------------------------
-
-\NewEntry{2013}{Java Dev. Intern, \textsc{McKesson} --- Montreal}
-
-\Description{\MarginText{McKesson Canada}Maintains and develops Java web applications for Liferay and PostgreSQL}
-
-%------------------------------------------------
-
-\section*{Personal Projects}
-
-% \NewEntry{2008}{Develops small 3D games with XNA in C\#}
-%
-% \Description{\MarginText{3D Graphics Experience}Develops small games as a hobby using C\# XNA, to learn programming and 3D graphics concepts.
-%
-% \begin{itemize}
-%     \item Experiments with reflective surfaces, specular highlights, metallic surfaces using HLSL vertex and pixel shaders
-%     \item Implements shadows using shadow mapping, depth maps and pixel shaders
-%     %\item Creates procedurally generated hills with heightmaps, wind swept grass instanced with the GPU
-%     %\item Creates a clone of Guitar Hero, parsing .midi files, using controller input and rendering the fretboard and particle effects in 3D 
-% \end{itemize}}
-
-% \NewEntry{2012--present}{CleverDock for Windows}
-%
-% \Description{\MarginText{CleverDock}Open-source taskbar replacement for Windows, inspired from Mac OS. Uses low-level windows APIs using \Cpp interop with C\# to implement a native taskbar functionnality. Has complex animations and boasts customizable themes.}
-%
-% \vspace{-0.5em}
-%
-% \Description{\href{https://github.com/dlacaille/clever-dock}{https://github.com/dlacaille/clever-dock}}
-
-\NewEntry{2019--present}{Findjoo Mobile for Android/iOS}
-
-\Description{\MarginText{Findjoo Mobile}Cross-platform React Native application. Provides members and event organizers with an easy to use interface to manage their calendar, scan tickets and receive important notifications.}
-
-\vspace{-0.5em}
-
-\Description{%
-    \href{https://play.google.com/store/apps/details?id=com.findjoomobile}{https://play.google.com/store/apps/details?id=com.findjoomobile}\newline%
-    \href{https://apps.apple.com/us/app/findjoo/id1499583717}{https://apps.apple.com/us/app/findjoo}%
-}
-
-
-%------------------------------------------------
-
-\section*{Skills}
-
-\Description{%
-    \MarginText{Programming Languages}%
-    Javascript, TypeScript, C\#, Java, PHP 8.1, \Cpp, \LaTeX, Lua, EBNF, Regex, Objective-C, Kotlin, Swift%
-}
-
-% \Description{%
-%     \MarginText{Development Environments}%
-%     NeoVim, VS Code, Rider, Visual Studio, Android Studio, Xcode, Sublime Text, Eclipse, IntelliJ, Atom%
-% }
-
-%\Description{\MarginText{Geography}ArcGIS, Leaflet}
-
-\Description{\MarginText{Mobile}React Native, iOS, Android}
-
-\Description{\MarginText{Web}React, Next.js, Laravel, Tailwind CSS, REST, GraphQL, .NET Core, Node.js}
-
-\Description{\MarginText{Testing}Mocha, Jest, Storybook, Gherkin/Cucumber, E2E, BDD, TDD}
-
-\Description{\MarginText{Cloud}Docker, AWS, ECS, Fargate, DataDog, Grafana, Azure Pipelines, GitHub Actions}
-
-%\Description{\MarginText{Source Control}Git, TFS, SVN, CI/CD}
-
-\Description{\MarginText{Databases}PostgreSQL, Prisma ORM, MongoDB, SQL Server, Entity Framework, MySQL}
-
-%\Description{\MarginText{Project Management}Jira, ZenHub, Asana}
-
-%\Description{\MarginText{Multimedia}Photoshop, Lightroom, Capture One, Sony Vegas, Blender, Cubase}
-
-%------------------------------------------------
-
-%\input{src/graph}
-
-%------------------------------------------------
-
-\section*{Other Information}
-
-\newlength{\langbox}
-\settowidth{\langbox}{Français}
-
-\Description{%
-    \MarginText{Languages}%
-    \parbox{\langbox}{\textsc{Français}}\ \ $\cdotp$\ \ \ Langue maternelle%
-}
-
-\vspace{-0.5em}
-
-\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Fully bilingual}
-
-\vspace{1em}
-
-\Description{\MarginText{Interests}Family\ \ $\cdotp$\ \ Programming\ \ $\cdotp$\ \ Photography\ \ $\cdotp$\ \ Music}
-
-\vspace{1em}
-
-\Description{\MarginText{}\itshape References upon request}
-
-\vspace{1em}
-
-\noindent \today
-
-\end{cv}
+%------------------------------------
+
+\thispagestyle{empty}
+
+\noindent
+\begin{minipage}{12cm}
+  \vspace{0.5em}
+  {\fontsize{33}{33}\noindent\selectfont\avl\uppercase{Dominic Lacaille}\par}
+  \vspace{1em}
+  {\noindent\large\avul\uppercase{Senior Developer}\par}
+\end{minipage}
+\hfill
+\begin{minipage}{4cm}
+  {\faPhone*\hspace{1.5em}514-984-0393\par}
+  \vspace{0.5em}
+  {\faEnvelope\hspace{1.5em}dominic@lacaille.app\par}
+  \vspace{0.5em}
+  {\faCanadianMapleLeaf\hspace{1.5em}Montreal, Canada\par}
+\end{minipage}
+
+\
+
+%------------------------------------
+\par\noindent\rule{\textwidth}{0.4pt}
+%------------------------------------
+
+\vspace{3em}
+
+\columnratio{0.33}
+\setlength{\columnsep}{4em}
+\setlength{\columnseprule}{0.4pt}
+\begin{paracol}{2}
+  \begin{leftcolumn}
+    % ------------------------------------------------------
+    \vspace{-2.5em}
+    \section{Education}
+    % ------------------------------------------------------
+
+    \subsection{Édouard-Montpetit College}
+    {DEC Computer Science\par}
+    Specialized in Business Computing \\
+    2010 - 2013
+
+    % ------------------------------------------------------
+    \section{Skills}
+    % ------------------------------------------------------
+
+    \subsection{Programming Languages}
+    \begin{itemize}
+      \item Javascript/Typescript
+      \item C\#/.NET Core
+      \item Java/Kotlin
+      \item Swift/Objective-C
+      \item PHP 8.1
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{0.5em}
+    % ------------------------------------------------------
+
+    \subsection{Mobile}
+    \begin{itemize}
+      \item React Native
+      \item iOS/Android
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{0.5em}
+    % ------------------------------------------------------
+
+    \subsection{Web}
+    \begin{itemize}
+      \item React/Next.js/Vue
+      \item Tailwind CSS
+      \item REST/GraphQL/gRPC
+      \item Node.js
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{0.5em}
+    % ------------------------------------------------------
+
+    \subsection{Cloud}
+    \begin{itemize}
+      \item Docker/Kubernetes
+      \item AWS 
+      \item DataDog/Grafana
+      \item CI/CD
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \pagebreak
+    % ------------------------------------------------------
+
+    \subsection{Testing}
+    \begin{itemize}
+      \item MSTest/NUnit
+      \item Jest/Mocha
+      \item Storybook
+      \item Gherkin/Cucumber
+      \item BDD/TDD
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{0.5em}
+    % ------------------------------------------------------
+
+    \subsection{Databases}
+    \begin{itemize}
+      \item PostgreSQL
+      \item NoSQL/MongoDB
+      \item Prisma ORM
+      \item MySQL
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \section{Languages}
+    % ------------------------------------------------------
+
+    \subsection{Français}
+    Langue Maternelle
+
+    % ------------------------------------------------------
+    \vspace{0.5em}
+    % ------------------------------------------------------
+
+    \subsection{English}
+    Fluent Speaking and Writing
+
+    % ------------------------------------------------------
+    \section{Interests}
+    % ------------------------------------------------------
+
+    \begin{itemize}
+      \item Family
+      \item Photography
+      \item Music
+    \end{itemize}
+
+    % ------------------------------------------------------
+
+  \end{leftcolumn}
+  \begin{rightcolumn}
+
+    % ------------------------------------------------------
+    \vspace{-2.5em}
+    \section{About Me}
+    % ------------------------------------------------------
+
+    Passionate software developer with \yearssince{2010}{09}{01} years of experience
+    crafting web, mobile, and server applications from concept to deployment. Thrives
+    on solving complex challenges using best practices in architecture and development,
+    with a keen eye for UI and UX design
+
+    % ------------------------------------------------------
+    \section{Experience}
+    % ------------------------------------------------------
+
+    \subsection{Solution-Tek, 01/2023 -- present}
+    {Senior Developer, Montreal\par}
+    {
+      Develops complex software capable of reaccommodating over 20M disrupted airline passengers per year
+      using C\#, RabbitMQ and micro-service architecture
+    \par}
+    \begin{itemize}
+      \item Develops a React frontend in Typescript to manage disrupted flights and passengers
+      \item Leads a project improving the performance of the React Frontend by 300\%
+      \item Initiates architecture discussions to improve the product and development practices
+      \item Implements heuristics in the backend for finding alternate flights according to airline rules
+      %\item Maintains and deploys services using IaC (Infrastructure as Code)
+      \item Supports and deploys cloud-native, high-availability services on AWS
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{1em}
+    % ------------------------------------------------------
+
+    \subsection{Swoo Agence Numérique, 01/2022 -- 01/2023}
+    {Senior Front-End Team Lead, Brossard\par}
+    {
+      Leads the team as an individual contributor in numerous web projects using PHP, WordPress, Laravel, Vue, and React
+    \par}
+    \begin{itemize}
+      \item Implements an agile structure to incite team work and help organize milestones
+      \item Trains developers on React, Typescript, accessibility principles, and tailwind CSS
+      \item Develops and maintains a complex Laravel/React website for a foodtech startup
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \pagebreak
+    % ------------------------------------------------------
+
+    \subsection{Higher Logic, 08/2020 -- 01/2022}
+    {Senior Front-End Developer, Montreal\par}
+    {
+      Develops React-based UI for the Vanilla Forum software
+    \par}
+    \begin{itemize}
+      \item Creates an analytics interface in React TypeScript with live data
+      \item Develops a declarative solution for generating complex forms in TypeScript
+      \item Maintains and improves the core of Vanilla Forums and its plugins in both PHP and React TypeScript
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{1em}
+    % ------------------------------------------------------
+
+    \subsection{Voxco Canada, 10/2015 -- 08/2020}
+    {Application Software Developer, Montreal\par}
+    {
+      Develops offline survey applications for web and mobile platforms
+    \par}
+    \begin{itemize}
+      \item Develops a survey engine in React TypeScript
+      \item Designs and develops an application for Android/iOS in Java/Objective-C
+      \item Develops APIs to support mobile applications
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{1em}
+    % ------------------------------------------------------
+
+    \subsection{Appcom, 08/2012 -- 10/2015}
+    {Full Stack Developer, Longueuil\par}
+    {
+      Develops mobile applications, .NET backends, and WordPress-based web solutions
+    \par}
+    \begin{itemize}
+      \item Develops mobile applications for GPS navigation on quads, snowmobiles, and boats in Java and Objective-C
+      \item Develops WordPress websites, plugins, and themes in PHP
+      \item Implements a license plate scanner for a mobile application using OpenCV
+      \item Develops an application capable of precisely triangulating the position of a device using Bluetooth beacons
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{1em}
+    % ------------------------------------------------------
+
+    \subsection{McKesson Canada, 05/2013 -- 08/2013}
+    {Java Developer Intern, Montreal\par}
+    {
+      Maintains and develops Java web applications for Liferay and PostgreSQL
+    \par}
+    \begin{itemize}
+      \item Implements a password reset page for a legacy system in Java and PostgreSQL
+      \item Develops an internal website in Java for employee satisfaction surveys
+    \end{itemize}
+
+    % ------------------------------------------------------
+    \vspace{3em}
+    % ------------------------------------------------------
+
+    References upon request \\
+    \today
+
+    \flushpage
+
+    \par\vfill
+
+  \end{rightcolumn}
+\end{paracol}
 
 \end{document}

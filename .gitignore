@@ -8,3 +8,5 @@
 *.gz
 *.out
 __latexindent_temp.tex
+node_modules
+package-lock.json

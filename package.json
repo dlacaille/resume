@@ -1,0 +1,32 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Find the latest PDFs here:",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "."
+      ],
+      "extensions": "tex",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "watch": "npm-watch build",
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlacaille/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlacaille/resume/issues"
+  },
+  "homepage": "https://github.com/dlacaille/resume#readme",
+  "dependencies": {
+    "npm-watch": "^0.13.0"
+  }
+}

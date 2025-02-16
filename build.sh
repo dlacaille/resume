@@ -1,4 +1,4 @@
 #!/bin/bash
-pdflatex dominic-lacaille-cv-en.tex
-pdflatex dominic-lacaille-cv-fr.tex
-pdflatex cover-letter.tex
+lualatex dominic-lacaille-cv-en.tex
+lualatex dominic-lacaille-cv-fr.tex
+lualatex cover-letter.tex
