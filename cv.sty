@@ -7,7 +7,17 @@
 ]{geometry}
 
 % Packages
-\usepackage{fontspec,fontawesome5,paracol,parskip,datenumber,enumitem}
+\usepackage{fontspec,fontawesome5,paracol,parskip,datenumber,enumitem,fancyhdr,afterpage}
+
+% Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\today}
+\fancyfoot[R]{\thepage}
+\setlength{\footskip}{3em}
+\setlength{\headheight}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 % Fonts
 \setmainfont[LetterSpace=3.0]{Avenir-Light.otf}
