@@ -10,10 +10,8 @@
 \usepackage{fontspec,fontawesome5,paracol,parskip,datenumber,enumitem}
 
 % Fonts
-\setmainfont[UprightFont={* Ultra Light},LetterSpace=3.0,FakeBold=3]{Avenir Next}
-
-\newfontfamily{\avl}[UprightFont={* Light},LetterSpace=2.0]{Avenir}
-\newfontfamily{\avul}[UprightFont={* Ultra Light},LetterSpace=25.0,WordSpace=2.5,FakeBold=3]{Avenir Next}
+\setmainfont[LetterSpace=3.0]{Avenir Light}
+\newfontfamily{\trackingwide}[LetterSpace=25.0,WordSpace=2.5]{Avenir Light}
 
 % Lists
 \setlist[itemize]{itemsep=2pt, parsep=0em, leftmargin=1.5em}
@@ -37,7 +35,7 @@
 % Section titles
 \renewcommand{\section}[1]{
   \vspace{1em}
-  \noindent{\large\avul\uppercase{#1}}\par
+  \noindent{\large\trackingwide\uppercase{#1}}\par
   \vspace{-1.2em}
   \noindent\rule{\columnwidth}{0.4pt}\par
   \vspace{0.5em}
