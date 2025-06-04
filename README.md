@@ -6,7 +6,7 @@ Find the latest PDFs here:
 
 [:page_facing_up:dominic-lacaille-cv-fr.pdf](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf)
 
-## Why?
+## Why LaTeX?
 
 Why not! Using a declarative language like Latex for my resume allows me to comment out experience to tailor my CV. I also love the idea of using a declarative language for typesetting, where I don't have to fight with Word for alignment or spacing.
 
