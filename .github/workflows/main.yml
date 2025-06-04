@@ -11,6 +11,11 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: 🏃‍♂️‍➡️ Checkout repository (fetch tags only)
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+    
       - name: 🏷️ Determine tag name
         id: tag
         run: |
@@ -26,7 +31,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.tag.outputs.tag_name }}
-          fetch-depth: 0 # Fetch tags
         
       - name: 📝 Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
