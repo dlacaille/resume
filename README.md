@@ -2,9 +2,9 @@
 
 Find the latest PDFs here:
 
-[:page_facing_up:dominic-lacaille-cv-en.pdf](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf)
-
-[:page_facing_up:dominic-lacaille-cv-fr.pdf](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf)
+| EN | FR |
+|:--:|:--:|
+| [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-en.png" width="300"><br>:page_facing_up:dominic-lacaille-cv-en.pdf](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf) | [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-fr.png" width="300"><br>:page_facing_up:dominic-lacaille-cv-fr.pdf](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf) |
 
 ## Why LaTeX?
 
