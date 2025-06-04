@@ -38,6 +38,17 @@ jobs:
         with:
           root_file: dominic-lacaille-cv-??.tex
           latexmk_use_lualatex: true
+          
+      - name: 🎒 Install Poppler (for PDF screenshots)
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: 📷 Generate PNG screenshot of first page
+        run: |
+          for pdf in dominic-lacaille-cv-*.pdf; do
+            output="screenshot-${pdf%.pdf}.png"
+            pdftoppm -png -f 1 -singlefile "$pdf" "${output%.png}"
+            echo "📷 Generated screenshot: $output"
+          done
 
       - name: ☑️ Ensure release exists
         run: |
@@ -55,7 +66,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.tag_name }}
-          files: dominic-lacaille-cv-*.pdf
+          files: |
+            dominic-lacaille-cv-*.pdf
+            screenshot-dominic-lacaille-cv-*.pdf.png
           fail_on_unmatched_files: true
           overwrite: true
         env:
