@@ -11,12 +11,11 @@ Find the latest PDFs here:
 Why not! Using a declarative language like Latex for my resume allows me to comment out experience to tailor my CV. I also love the idea of using a declarative language for typesetting, where I don't have to fight with Word for alignment or spacing.
 
 Here's a list of other reasons for using Latex:
-- Declarative is better than WYSIWYG
 - Beautiful, the typesetting of Latex is unmatched
-- Can add comments
 - Don't need a specific version of Word to get my resume to look the way I want
 - Build it with CI!
 - The challenge is fun and rewarding
+- Can be versioned it with Git
 
 ## Installing LaTeX
 
