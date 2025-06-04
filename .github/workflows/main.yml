@@ -68,7 +68,7 @@ jobs:
           tag_name: ${{ steps.tag.outputs.tag_name }}
           files: |
             dominic-lacaille-cv-*.pdf
-            screenshot-dominic-lacaille-cv-*.pdf.png
+            screenshot-dominic-lacaille-cv-*.png
           fail_on_unmatched_files: true
           overwrite: true
         env:
