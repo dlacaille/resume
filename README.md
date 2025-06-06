@@ -15,7 +15,7 @@ Here's a list of other reasons for using Latex:
 - Don't need a specific version of Word to get my resume to look the way I want
 - Build it with CI!
 - The challenge is fun and rewarding
-- Can be versioned it with Git
+- Can be versioned with Git
 
 ## Installing LaTeX
 
