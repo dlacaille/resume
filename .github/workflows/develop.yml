@@ -2,8 +2,8 @@ name: Preview LaTeX document
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   build_latex:
