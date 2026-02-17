@@ -31,6 +31,11 @@ Windows (Chocolatey):
 choco install texlive
 ```
 
+Fedora (DNF)
+```sh
+sudo dnf install texlive-full
+```
+
 ## Installing dependencies
 
 Using `tlmgr`, install the following:
