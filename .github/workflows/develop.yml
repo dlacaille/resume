@@ -18,27 +18,9 @@ jobs:
           root_file: dominic-lacaille-cv-??.tex
           latexmk_use_lualatex: true
           
-      - name: 🎒 Install Poppler (for PDF screenshots)
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: 📷 Generate PNG screenshot of first page
-        run: |
-          for pdf in dominic-lacaille-cv-*.pdf; do
-            output="screenshot-${pdf%.pdf}.png"
-            pdftoppm -png -f 1 -singlefile "$pdf" "${output%.png}"
-            echo "📷 Generated screenshot: $output"
-          done
-          
       - name: 📋 Upload PDFs
         uses: actions/upload-artifact@v4
         with:
           name: cv-preview-pdfs
           path: dominic-lacaille-cv-*.pdf
-          retention-days: 30
-
-      - name: 🖼️ Upload thumbnails
-        uses: actions/upload-artifact@v4
-        with:
-          name: cv-thumbnails
-          path: screenshot-dominic-lacaille-cv-*.pdf.png
           retention-days: 30
