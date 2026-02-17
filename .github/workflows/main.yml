@@ -59,6 +59,12 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 📋 Upload PDFs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-preview-pdfs
+          path: dominic-lacaille-cv-*.pdf
 
       - name: 🚚 Upload PDFs to GitHub release
         uses: softprops/action-gh-release@v2
