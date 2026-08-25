@@ -33,8 +33,22 @@ jobs:
           root_file: dominic-lacaille-cv-??.tex
           latexmk_use_lualatex: true
 
-      - name: 🎒 Install Poppler (for PDF screenshots)
+      - name: 🎒 Install Poppler (for PDF inspections and screenshots)
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: 📏 Verify PDFs are at most 2 pages
+        run: |
+          status=0
+          for pdf in dominic-lacaille-cv-*.pdf; do
+            pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+            if [ "$pages" -gt 2 ]; then
+              echo "::error file=$pdf::$pdf has $pages pages (maximum allowed is 2)"
+              status=1
+            else
+              echo "✅ $pdf: $pages page(s)"
+            fi
+          done
+          exit $status
 
       - name: 📷 Generate PNG screenshot of first page
         run: |
