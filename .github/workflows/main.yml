@@ -2,41 +2,33 @@ name: Release LaTeX document
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: 🏃‍♂️‍➡️ Checkout repository (fetch tags only)
+      - name: 🏃‍♂️‍➡️ Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          fetch-tags: true
-    
-      - name: 🏷️ Determine tag name
+
+      - name: 🏷️ Generate version from date and time
         id: tag
         run: |
-          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            TAG_NAME="${GITHUB_REF#refs/tags/}"
-          else
-            TAG_NAME=$(git tag | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1)
-          fi
-          echo "🏷️ Using tag: $TAG_NAME"
+          TAG_NAME=$(TZ="America/Montreal" date +'%Y.%m.%d-%H.%M')
+          echo "🏷️ Using version: $TAG_NAME"
           echo "tag_name=$TAG_NAME" >> "$GITHUB_OUTPUT"
-          
-      - name: 🗃️ Set up Git repository
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ steps.tag.outputs.tag_name }}
-        
+
       - name: 📝 Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
           root_file: dominic-lacaille-cv-??.tex
           latexmk_use_lualatex: true
-          
+
       - name: 🎒 Install Poppler (for PDF screenshots)
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
@@ -48,32 +40,21 @@ jobs:
             echo "📷 Generated screenshot: $output"
           done
 
-      - name: ☑️ Ensure release exists
-        run: |
-          TAG=${{ steps.tag.outputs.tag_name }}
-          if ! gh release view "$TAG" > /dev/null 2>&1; then
-            echo "📝 Creating GitHub release for tag $TAG"
-            gh release create "$TAG" --title "$TAG" --notes "Automated release for $TAG"
-          else
-            echo "☑️ Release for tag $TAG already exists"
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
       - name: 📋 Upload PDFs as artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-preview-pdfs
           path: dominic-lacaille-cv-*.pdf
 
-      - name: 🚚 Upload PDFs to GitHub release
+      - name: 🚚 Create release and upload files
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.tag_name }}
+          name: ${{ steps.tag.outputs.tag_name }}
+          target_commitish: ${{ github.sha }}
           files: |
             dominic-lacaille-cv-*.pdf
             screenshot-dominic-lacaille-cv-*.png
           fail_on_unmatched_files: true
-          overwrite: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
