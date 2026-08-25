@@ -4,7 +4,7 @@ Find the latest PDFs here:
 
 | EN | FR |
 |:--:|:--:|
-| [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-en.png" width="300"><br>![GitHub Release](https://img.shields.io/github/v/release/dlacaille/resume?style=for-the-badge&label=English%20PDF)](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en.pdf) | [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-fr.png" width="300"><br>![GitHub Release](https://img.shields.io/github/v/release/dlacaille/resume?style=for-the-badge&label=French%20PDF)](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr.pdf) |
+| [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-en.png" width="300"><br>![GitHub Release](https://img.shields.io/github/v/release/dlacaille/resume?style=for-the-badge&label=English%20PDF)](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-en-2026-08-25.pdf) | [<img alt="Screenshot of the first page of the resume" src="https://github.com/dlacaille/resume/releases/latest/download/screenshot-dominic-lacaille-cv-fr.png" width="300"><br>![GitHub Release](https://img.shields.io/github/v/release/dlacaille/resume?style=for-the-badge&label=French%20PDF)](https://github.com/dlacaille/resume/releases/latest/download/dominic-lacaille-cv-fr-2026-08-25.pdf) |
 
 ## Why LaTeX?
 
