@@ -75,7 +75,7 @@ jobs:
           DATE=${{ steps.date.outputs.date }}
           sed -i -E "s/(dominic-lacaille-cv-(en|fr))(-[0-9]{4}-[0-9]{2}-[0-9]{2})?\.pdf/\1-$DATE.pdf/g" README.mduses: stefanzweifel/git-auto-commit-action@v7
           
-      - name: 🎀 Update README with release date
+      - name: 🎀 Commit updated README.md
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "docs: update CV date to ${{ steps.date.outputs.date }}"
