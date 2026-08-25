@@ -1,5 +1,7 @@
 # Dominic Lacaille's Resume / CV
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dlacaille/resume/main.yml)
+
 Find the latest PDFs here:
 
 | EN | FR |
