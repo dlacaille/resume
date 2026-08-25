@@ -36,13 +36,13 @@ jobs:
       - name: 🎒 Install Poppler (for PDF inspections and screenshots)
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
-      - name: 📏 Verify PDFs are at most 2 pages
+      - name: 📏 Verify PDFs are exactly 2 pages
         run: |
           status=0
           for pdf in dominic-lacaille-cv-*.pdf; do
             pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
-            if [ "$pages" -gt 2 ]; then
-              echo "::error file=$pdf::$pdf has $pages pages (maximum allowed is 2)"
+            if [ "$pages" -ne 2 ]; then
+              echo "::error file=$pdf::$pdf has $pages pages (must be 2)"
               status=1
             else
               echo "✅ $pdf: $pages page(s)"
